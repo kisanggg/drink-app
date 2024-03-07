@@ -1,0 +1,24 @@
+.main-wrapperr{
+    background-color: #dddad6;
+}
+.drink-wrapper{
+    text-align: center;
+}
+p{
+    margin-left: 250px;
+}
+.wrapper{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-left: 0px;
+    justify-content: space-evenly;
+    align-items: stretch;
+    justify-items: center;
+}
+.title{
+    font-size: 13px;
+    margin: 0px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
