@@ -1,11 +1,11 @@
 import React from "react";
 import "./header.css";
-import { Nav, Navbar, Container, Form } from "react-bootstrap";
+import { Nav, Navbar, Container } from "react-bootstrap";
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "../home/Home";
 import Drink from "../Drink/Drink";
-import Gallery from "../gallery/Gallery";
-import { Search } from "react-bootstrap-icons";
+import Categories from "../categories/Categories";
+import {Person} from "react-bootstrap-icons";
 import Ingredients from "../Drink/Ingredients";
 const Header = () => {
   return (
@@ -20,29 +20,17 @@ const Header = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto" style={{ fontSize: "20px", color:"white" }}>
-                <Nav.Link as={Link} to="/drinks" style={{color:"white"}}>
+                <Nav.Link as={Link} to="/drinks" className="drinks" style={{color:"white"}}>
                   Drinks
                 </Nav.Link><Nav.Link as={Link} to="/ingredients" style={{color:"white"}}>
                  Ingredients
                 </Nav.Link>
-                <Nav.Link as={Link} to="/gallery" style={{color:"white"}}>
-                  Gallery
+                <Nav.Link as={Link} to="/categories" style={{color:"white"}}>
+                  Categories
                 </Nav.Link>
               </Nav>
-              <Form>
-                <input
-                  type="text"
-                  placeholder="Search"
-                  style={{ width: "200px" }}
-                ></input>
-                <button
-                  style={{ borderRadius: "2px" }}
-                  type="submit"
-                  id="searchSubmit"
-                >
-                  <Search />
-                </button>
-              </Form>
+             
+              <Person size={30} style={{marginLeft:"20px",color:"white"}}/>
             </Navbar.Collapse>
           </Container>
         </Navbar>
@@ -52,7 +40,7 @@ const Header = () => {
           <Route path="/home" element={<Home />}></Route>
           <Route path="/drinks" element={<Drink />}></Route>
           <Route path="/ingredients" element={<Ingredients/>}></Route>
-          <Route path="/gallery" element={<Gallery />}></Route>
+          <Route path="/categories" element={<Categories />}></Route>
         </Routes>
       </div>
     </>

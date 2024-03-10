@@ -1,5 +1,17 @@
+
+
+.nav-link:hover {
+    color: grey !important;
+  }
+  .navbar-brand:hover {
+    color: grey !important;
+  }
+  
 button{
     border: 1px solid black;
     border-radius: 5px;
     height: 30px;
+}
+button:hover{
+    background-color: grey;
 }

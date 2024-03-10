@@ -1,67 +1,26 @@
 .body{
-    /* background-color: rgb(197, 197, 197); */
-    width: 100vw;
+    background-color: rgb(244, 244, 244);
+    width: 98.7vw;
     align-items: center;
     margin-left: 0px;
+}
+input{
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 500px;
 }
 .main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:rgb(197, 197, 197) ;
+    background-color:rgb(244, 244, 244) ;
 }
 img{
     margin-top: 10px;
     margin: 30px;
 }
-h1 i{
-    text-align: center;
-    font-size: 60px;
-    font-family: SauberScript;
-}
-h1{
-    text-align: center;
-}
 p{
-    text-align: center;
+    text-align: justify;
     margin: 10px;
-}
-h2 i{
-    margin:20px ;
-    margin-top: 80px;
-    text-align: center;
-    font-size: 40px;
-    color: rgb(147, 120, 76);
-    font-family: SauberScript;
-    margin-left: 370px;
-}
-h2{
-    text-align: center;
-    margin-top: 30px;
-}
-.p2{
-    width: 450px;
-    font-size: 25px;
-    text-align: center;
-    margin-left: 370px;
-}
-.p3{
-    width: 450px;
-    font-size: 17px;
-    text-align: center;
-    margin-left: 370px;
-    margin-top: 30px;
-}
-.p4{
-    width: 490px;
-    font-size: 20px;
-    text-align: center;
-    margin-left: 370px;
-}
-.p5{
-    width: 490px;
-    font-size: 17px;
-    text-align: center;
-    margin-left: 370px;
-    margin-top: 30px;
+    font-size: 13px;
 }
