@@ -1,47 +1,65 @@
 import React, { useEffect, useState } from "react";
 import "./drink.css";
-import { Card } from "react-bootstrap";
+import { Card, Modal } from "react-bootstrap";
 import { HeartFill } from "react-bootstrap-icons";
 
 const Recipe = () => {
   const [category, setCategories] = useState([]);
   const [zoomedImage, setZoomedImage] = useState(null);
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedItemDetails, setSelectedItemDetails] = useState(null);
 
   useEffect(() => {
     fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail")
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      setCategories(
-        data.drinks.map((drink) => ({ ...drink, isClicked: true }))
-        );
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setCategories(data.drinks.map((drink) => ({ ...drink, isClicked: true })));
       })
       .catch((error) => {
         console.log(error.message);
       });
-    }, []);
-    
-    const handleHeartClick = (drinkId) => {
-      setCategories((prevCategories) => {
-        return prevCategories.map((drink) => {
-          if (drink.idDrink === drinkId) {
-            return { ...drink, isClicked: !drink.isClicked };
-          }
-          return drink;
-        });
+  }, []);
+
+  const handleHeartClick = (drinkId) => {
+    setCategories((prevCategories) => {
+      return prevCategories.map((drink) => {
+        if (drink.idDrink === drinkId) {
+          return { ...drink, isClicked: !drink.isClicked };
+        }
+        return drink;
       });
-    };
-    const handleImageClick = (imageUrl) => {
-      setZoomedImage(imageUrl);
-    };
-  
-    const handleZoomedImageClose = () => {
-      setZoomedImage(null);
-    };
+    });
+  };
+  const handleImageClick = (imageUrl) => {
+    setZoomedImage(imageUrl);
+  };
+
+  const handleZoomedImageClose = () => {
+    setZoomedImage(null);
+  };
+  const handleItemClick = (drink) => {
+    setSelectedItem(drink);
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drink.idDrink}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setSelectedItemDetails(data.drinks[0]);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
+  const handleCloseModal = () => {
+    setSelectedItem(null);
+    setSelectedItemDetails(null);
+  };
+
+
   return (
     <div className="main-wrapperr">
       <div className="drink-wrapper">
-        <h1
+      <h1
           style={{
             textAlign: "center",
             fontFamily: "initial",
@@ -173,12 +191,12 @@ const Recipe = () => {
           ></img>
         </div>
         {zoomedImage && (
-        <div className="zoomed-image-container" style={{display:"solid",border:"1px solid black"}}>
-          <div className="zoomed-image-overlay" onClick={handleZoomedImageClose}></div>
-          <img src={zoomedImage} alt="zoomed" className="zoomed-image" />
-          <button className="close-button" onClick={handleZoomedImageClose} style={{marginTop:"5px"}}>
-            Close
+        <div className="zoomed-image-container" style={{}}>
+          <button className="close-button" onClick={handleZoomedImageClose} style={{marginTop:"5px",marginLeft:"460px",width:"40px"}}>
+            X
           </button>
+          <div className="zoomed-image-overlay" onClick={handleZoomedImageClose}></div>
+          <img src={zoomedImage} alt="zoomed" className="zoomed-image" style={{marginTop:"1px",width:"500px",height:"500px"}}/>
          
         </div>
       )}
@@ -192,7 +210,7 @@ const Recipe = () => {
           color: "rgb(201 200 197)",
         }}
       >
-        MOST POPULAR
+        MOST POPULAR COCKTAILS
       </h4>
       <div className="wrapper">
         {category.map((drink) => (
@@ -203,6 +221,7 @@ const Recipe = () => {
               margin: "20px",
               backgroundColor: "rgb(187 187 187)",
             }}
+            onClick={() => handleItemClick(drink)}
           >
             <Card.Img
               className="image"
@@ -232,6 +251,38 @@ const Recipe = () => {
           </Card>
         ))}
       </div>
+      <Modal show={selectedItem !== null} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>{selectedItem && selectedItem.strDrink}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body style={{ width: "440px" }}>
+          {selectedItemDetails && (
+            <>
+              <img
+                src={selectedItemDetails.strDrinkThumb}
+                alt={selectedItemDetails.strDrink}
+                style={{ width: "100%", marginBottom: "10px" }}
+              />
+              <h5>Instructions:</h5>
+              <p>{selectedItemDetails.strInstructions}</p>
+              <h5>Ingredients:</h5>
+              
+              <ul>
+                <li style={{ marginLeft: "30px" }}>
+                  {selectedItemDetails.strIngredient1}:{selectedItemDetails.strMeasure1}
+                </li>
+                <li style={{ marginLeft: "30px" }}>
+                  {selectedItemDetails.strIngredient2}:{selectedItemDetails.strMeasure2}
+                </li>
+                <li style={{ marginLeft: "30px" }}>
+                  {selectedItemDetails.strIngredient3}:{selectedItemDetails.strMeasure3}
+                </li>
+              </ul>
+              
+            </>
+          )}
+        </Modal.Body>
+      </Modal>
     </div>
   );
 };

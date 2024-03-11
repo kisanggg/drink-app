@@ -9,7 +9,7 @@ const Home = () => {
           src="https://www.okayplayer.com/media-library/photo-by-jakub-dziubak-for-unsplash.jpg?id=46471783&width=1245&height=700&quality=90&coordinates=0%2C0%2C0%2C158"
           alt="err"
           style={{
-            width: "110vw",
+            width: "94vw",
             height: "100vh",
           }}
         ></img>
@@ -40,7 +40,7 @@ const Home = () => {
         </button>
       </div>
       <div style={{ display: "flex" }}>
-        <img
+        <img style={{width:"400px",marginLeft:"70px"}}
           src="https://www.nicepng.com/png/detail/122-1221053_whiskey-glass-png-rum-in-glass-png.png"
           alt="err"
         ></img>

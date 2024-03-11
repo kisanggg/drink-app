@@ -29,6 +29,6 @@
 .images{
     display: flex;
     width: 95vw;
-    overflow: scroll;
+    overflow: auto;
 
 }
