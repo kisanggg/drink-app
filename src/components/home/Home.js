@@ -1,7 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./home.css";
 import { Search } from "react-bootstrap-icons";
+import Searchfield from "../Searchfield/Searchfield";
 const Home = () => {
+  const [searchTerm, setSearchTerm] = useState(""); 
+  const [searchResults, setSearchResults] = useState([]); 
+
+  useEffect(() => {
+    if (!searchTerm) return; 
+    
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchTerm}`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data); 
+        if (data.drinks) {
+          setSearchResults(data.drinks);
+        } else {
+          setSearchResults([]);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, [searchTerm]);
+  
+
+  const handleSearch = () => {
+    setSearchTerm(document.getElementById("searchInput").value);
+  };
   return (
     <div className="body">
       <div className="main">
@@ -13,7 +39,8 @@ const Home = () => {
             height: "100vh",
           }}
         ></img>
-        <input
+        {/* <input
+        id="searchInput"
           type="text"
           placeholder="Search"
           style={{
@@ -27,6 +54,7 @@ const Home = () => {
           }}
         ></input>
         <button
+        onClick={handleSearch}
           style={{
             position: "absolute",
             marginLeft: "823px",
@@ -37,7 +65,7 @@ const Home = () => {
           }}
         >
           <Search size={25} />
-        </button>
+        </button> */}
       </div>
       <div style={{ display: "flex" }}>
         <img style={{width:"400px",marginLeft:"70px"}}

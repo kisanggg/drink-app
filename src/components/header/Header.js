@@ -21,9 +21,9 @@ const Header = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto" style={{ fontSize: "20px", color:"white" }}>
-                <Nav.Link as={Link} to="/categories" style={{color:"white"}}>
+                {/* <Nav.Link as={Link} to="/categories" style={{color:"white"}}>
                   Categories
-                </Nav.Link>
+                </Nav.Link> */}
                 <Nav.Link as={Link} to="/drinks" className="drinks" style={{color:"white"}}>
                   Drinks
                 </Nav.Link>
@@ -43,7 +43,7 @@ const Header = () => {
           <Route path="/drinks" element={<Drink />}></Route>
           {/* <Route path={'/drinks/:idDrink'} element={<DrinkDetails/>}></Route> */}
           {/* <Route path="/ingredients" element={<Ingredients/>}></Route> */}
-          <Route path="/categories" element={<Categories />}></Route>
+          {/* <Route path="/categories" element={<Categories />}></Route> */}
         </Routes>
       </div>
     </>

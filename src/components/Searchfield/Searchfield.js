@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
-const Searchfield = () => {
+const Searchfield = (props) => {
+    const SearchRef=useRef();
+    const handleSearch=()=>{
+        let value=SearchRef.current.value;
+        props?.onSearchInitiate(value)
+    }
   return (
     <div>
-      
+      <input ref={SearchRef}/>
+      <button onClick={()=>handleSearch()}></button>
     </div>
   )
 }
