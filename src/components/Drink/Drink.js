@@ -274,7 +274,7 @@ const Recipe = () => {
                   style={{
                     width: "16rem",
                     margin: "20px",
-                    backgroundColor: "rgb(187 187 187)",
+                    backgroundColor: "rgb(109 109 109)",
                   }}
                   onClick={() => handleItemClick(drink)}
                 >

@@ -1,121 +1,65 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./home.css";
-import { Search } from "react-bootstrap-icons";
-import Searchfield from "../Searchfield/Searchfield";
+import { Clock, Envelope, GeoAltFill } from "react-bootstrap-icons";
 const Home = () => {
-  const [searchTerm, setSearchTerm] = useState(""); 
-  const [searchResults, setSearchResults] = useState([]); 
-
-  useEffect(() => {
-    if (!searchTerm) return; 
-    
-    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchTerm}`)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data); 
-        if (data.drinks) {
-          setSearchResults(data.drinks);
-        } else {
-          setSearchResults([]);
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, [searchTerm]);
-  
-
-  const handleSearch = () => {
-    setSearchTerm(document.getElementById("searchInput").value);
-  };
   return (
     <div className="body">
       <div className="main">
         <img
-          src="https://www.okayplayer.com/media-library/photo-by-jakub-dziubak-for-unsplash.jpg?id=46471783&width=1245&height=700&quality=90&coordinates=0%2C0%2C0%2C158"
+          src="https://www.foodrepublic.com/img/gallery/18-unusual-craft-cocktail-ingredients-you-should-try-at-least-once/l-intro-1689108572.jpg"
           alt="err"
           style={{
             width: "94vw",
             height: "100vh",
           }}
         ></img>
-        {/* <input
-        id="searchInput"
-          type="text"
-          placeholder="Search"
-          style={{
-            width: "420px",
-            height: "45px",
-            position: "absolute",
-            margin: "20px",
-            marginLeft: "400px",
-            border: "1px solid black",
-            borderRadius: "8px",
-          }}
-        ></input>
-        <button
-        onClick={handleSearch}
+        <h1
           style={{
             position: "absolute",
-            marginLeft: "823px",
-            height: "45px",
-            width: "80px",
-            border: "1px solid black",
-            borderRadius: "8px",
+            color: "#bd7a11",
+            marginLeft: "450px",
+            fontFamily: "Times New Roman",
           }}
         >
-          <Search size={25} />
-        </button> */}
+          COCKTAIL PARTY
+        </h1>
       </div>
-      <div style={{ display: "flex" }}>
-        <img style={{width:"400px",marginLeft:"70px"}}
-          src="https://www.nicepng.com/png/detail/122-1221053_whiskey-glass-png-rum-in-glass-png.png"
-          alt="err"
-        ></img>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            margin: "30px",
-          }}
+      <div style={{ width: "450px",textAlign:"center",marginLeft:"400px",marginTop:"40px" }}>
+        <h2
+          style={{ marginLeft: "1px", color: "white", textAlign: "center" }}
         >
-          <div style={{ width: "280px" }}>
-            <h4 style={{ marginLeft: "1px" }}>About Us</h4>
-            <h6 style={{ marginLeft: "1px" }}>Best Ingredients</h6>
-            <p>
-              Every cocktail typically starts with a base spirit, which forms
-              the primary alcoholic component of the drink. Common base spirits
-              include vodka, rum, gin, tequila, whiskey, and brandy.
-            </p>
-            <h6 style={{ marginLeft: "1px" }}>Farming Practices</h6>
-            <p>
-              Farming practices for cocktail ingredients can vary significantly
-              depending on the specific ingredient and its agricultural
-              requirements.
-            </p>
-          </div>
-          <div
-            style={{
-              width: "280px",
-              textAlign: "justify",
-              marginLeft: "40px",
-              marginTop: "36px",
-            }}
-          >
-            <h6 style={{ marginLeft: "1px" }}>Our Process</h6>
-            <p>
-              The process of cocktail making, also known as mixology, involves
-              several key steps to craft a well-balanced and flavorful drink.
-            </p>
-            <h6 style={{ marginTop: "48px", marginLeft: "1px" }}>
-              Story Behind
-            </h6>
-            <p>
-              The story behind cocktail making is a rich and diverse narrative
-              that spans centuries and continents.{" "}
-            </p>
-          </div>
+          About Us
+        </h2>
+        <p>
+          Every cocktail typically starts with a base spirit, which forms the
+          primary alcoholic component of the drink. Common base spirits include
+          vodka, rum, gin, tequila, whiskey, and brandy.Farming practices for
+          cocktail ingredients can vary significantly depending on the specific
+          ingredient and its agricultural requirements.The process of cocktail
+          making, also known as mixology, involves several key steps to craft a
+          well-balanced and flavorful drink..Farming practices for
+          cocktail ingredients can vary significantly depending on the specific
+          ingredient and its agricultural requirements.The process of cocktail
+          making, also known as mixology, involves several key steps to craft a
+          well-balanced and flavorful drink.
+        </p>
+      </div>
+      <div style={{backgroundColor:"rgb(33, 32, 32)",marginTop:"40px"}}>
+        <img src="https://media.timeout.com/images/103780539/750/422/image.jpg" alt="err" width={600} height={400} style={{position:"absolute"}}></img>
+        <img src="https://www.shutterstock.com/image-photo/expert-barman-making-cocktail-night-600nw-439422121.jpg" alt="e" style={{position:"absolute",marginLeft:"630px",marginTop:"30px"}}></img>
+      </div>
+      <div style={{height:"160px",backgroundColor:"rgb(189, 122, 17)",marginTop:"480px",display:"flex",justifyContent:"space-evenly",flexWrap:"wrap"}}>
+        <div style={{marginLeft:"0px"}}>
+          <GeoAltFill size={27} style={{marginLeft:"70px",marginTop:"40px"}}/>
+          <p style={{fontSize:"17px",color:"black",textAlign:"left",marginLeft:"18px"}}>Kathmandu, Nepal</p>
+        </div>
+        <div >
+          <Clock size={27} style={{marginTop:"45px"}}/>
+          <p style={{color:"black"}}>Mon-Fri : 10AM - 12PM</p>
+          <p style={{color:"black"}}>Sat-Sun : 10AM - 4AM</p>
+        </div>
+        <div>
+          <Envelope size={27} style={{marginTop:"45px",marginLeft:"10px"}}/>
         </div>
       </div>
     </div>

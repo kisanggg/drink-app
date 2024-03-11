@@ -1,6 +1,7 @@
 .body{
-    background-color: rgb(244, 244, 244);
+    background-color: rgb(33, 32, 32);
     width: 98.7vw;
+    height: 1570px;
     align-items: center;
     margin-left: 0px;
 }
@@ -13,14 +14,15 @@ input{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:rgb(244, 244, 244) ;
+    background-color:rgb(33, 32, 32) ;
 }
 img{
     margin-top: 10px;
     margin: 30px;
 }
 p{
-    text-align: justify;
+    text-align: center;
     margin: 10px;
     font-size: 13px;
+    color:#d3cccc;
 }
