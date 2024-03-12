@@ -4,25 +4,26 @@ import { Envelope, GeoAlt, Telephone } from "react-bootstrap-icons";
 
 const Contact = () => {
   return (
-    <div style={{ backgroundColor: "black" ,height:"600px"}}>
+    <div style={{ backgroundColor: "black", height: "700px" }}>
       <div
         style={{
           display: "flex",
           border: "1px solid white",
-          borderRadius:"8px",
-          margin: "20px",
+          borderRadius: "8px",
+          margin: "0px",
           width: "1150px",
-          backgroundColor: "black",
           marginTop: "0px",
           marginBottom: "0px",
           marginLeft: "55px",
+          backgroundColor: "black",
+          height: "600px",
         }}
       >
         <div style={{ display: "flex" }}>
           <img
             src="https://images.unsplash.com/photo-1518112166137-85f9979a43aa?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
-            style={{ width: "600px", height: "500px" }}
+            style={{ width: "600px", height: "550px" }}
           ></img>
           <div
             style={{
@@ -78,15 +79,15 @@ const Contact = () => {
             style={{
               marginBottom: "20px",
               fontFamily: "Times New Roman",
-              color: "white",
+              color: "#aeaeae",
             }}
           >
             Send Us A Message
           </h2>
           <form id="form" className="form" style={{}}>
             <label
-              for="Name"
-              style={{ marginLeft: "10px", fontSize: "18px", color: "white" }}
+              htmlFor="fName"
+              style={{ marginLeft: "10px", fontSize: "18px", color: "#aeaeae" }}
             >
               Full Name*
             </label>
@@ -105,8 +106,8 @@ const Contact = () => {
             ></input>
             <br />
             <label
-              for="Email"
-              style={{ marginLeft: "10px", fontSize: "18px", color: "white" }}
+              htmlFor="email"
+              style={{ marginLeft: "10px", fontSize: "18px", color: "#aeaeae" }}
             >
               Enter your email*
             </label>
@@ -119,8 +120,8 @@ const Contact = () => {
             ></input>
             <br />
             <label
-              for="phone number"
-              style={{ marginLeft: "10px", fontSize: "18px", color: "white" }}
+              htmlFor="phnNo"
+              style={{ marginLeft: "10px", fontSize: "18px", color: "#aeaeae" }}
             >
               Enter your phone number*
             </label>
@@ -133,8 +134,8 @@ const Contact = () => {
             ></input>
             <br />
             <label
-              for="message"
-              style={{ marginLeft: "10px", fontSize: "18px", color: "white" }}
+              htmlFor="message"
+              style={{ marginLeft: "10px", fontSize: "18px", color: "#aeaeae" }}
             >
               Message*
             </label>

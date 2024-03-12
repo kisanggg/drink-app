@@ -5,7 +5,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Home from "../home/Home";
 import Drink from "../Drink/Drink";
 import Contact from "./Contact";
-import {Person} from "react-bootstrap-icons";
+import Ordinary from "../Drink/Ordinary";
 const Header = () => {
   return (
     <>
@@ -22,14 +22,17 @@ const Header = () => {
                   Home
                 </Nav.Link>
                 <Nav.Link as={Link} to="/drinks" className="drinks" style={{color:"white"}}>
-                  Drinks
+                  Cocktails
+                </Nav.Link>
+                <Nav.Link as={Link} to="/ordinary" style={{color:"white"}}>
+                 Ordinary Drinks
                 </Nav.Link>
                 <Nav.Link as={Link} to="/contact" style={{color:"white"}}>
                  Contact Us
                 </Nav.Link>
               </Nav>
              
-              <Person size={30} style={{marginLeft:"20px",color:"white"}}/>
+              {/* <Person size={30} style={{marginLeft:"20px",color:"white"}}/> */}
             </Navbar.Collapse>
           </Container>
         </Navbar>
@@ -39,7 +42,7 @@ const Header = () => {
           <Route path="/home" element={<Home />}></Route>
           <Route path="/drinks" element={<Drink />}></Route>
           <Route path="/contact" element={<Contact/>}></Route>
-          {/* <Route path="/categories" element={<Categories />}></Route> */}
+          <Route path="/ordinary" element={<Ordinary />}></Route>
         </Routes>
       </div>
     </>

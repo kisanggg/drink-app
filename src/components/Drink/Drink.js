@@ -75,150 +75,6 @@ const Recipe = () => {
   return (
     <>
       <div className="main-wrapperr">
-        <div className="drink-wrapper">
-          <h1
-            style={{
-              textAlign: "center",
-              fontFamily: "initial",
-              color: "rgb(201 200 197)",
-            }}
-          >
-            DRINKS
-          </h1>
-          <div className="images">
-            <img
-              src="https://www.liquor.com/thmb/sUKZSwJj7slc5l-LDyK8eajT0LY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/very-sexy-martini-720x720-primary-b1212ebf73f54f898a56f7f0b60c0a34.jpg"
-              alt="err"
-              style={{ width: "200px", height: "200px" }}
-              onClick={() =>
-                handleImageClick(
-                  "https://www.liquor.com/thmb/sUKZSwJj7slc5l-LDyK8eajT0LY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/very-sexy-martini-720x720-primary-b1212ebf73f54f898a56f7f0b60c0a34.jpg"
-                )
-              }
-            ></img>
-            <img
-              src="https://www.liquor.com/thmb/FtK86O9W4_pRq1Y3gc1iJerTGP8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/vodka-martini-1500x1500-hero-080af5bb8ff04851a9c0ecf77a88a818.jpg"
-              alt="err"
-              style={{ width: "200px", height: "200px" }}
-              onClick={() =>
-                handleImageClick(
-                  "https://www.liquor.com/thmb/FtK86O9W4_pRq1Y3gc1iJerTGP8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/vodka-martini-1500x1500-hero-080af5bb8ff04851a9c0ecf77a88a818.jpg"
-                )
-              }
-            ></img>
-            <img
-              src="https://www.acouplecooks.com/wp-content/uploads/2021/12/Vodka-Sunrise-001.jpg"
-              alt="err"
-              style={{ width: "200px", height: "200px" }}
-              onClick={() =>
-                handleImageClick(
-                  "https://www.acouplecooks.com/wp-content/uploads/2021/12/Vodka-Sunrise-001.jpg"
-                )
-              }
-            ></img>
-            <img
-              src="https://cdn.shopify.com/s/files/1/0247/4681/9693/files/Daiquiri_Summer_Cocktail_8a2a0474-bf6e-40db-80a5-e6e6d5a5a7e8_large.jpg?v=1591992228"
-              alt="err"
-              style={{ width: "200px", height: "200px" }}
-              onClick={() =>
-                handleImageClick(
-                  "https://cdn.shopify.com/s/files/1/0247/4681/9693/files/Daiquiri_Summer_Cocktail_8a2a0474-bf6e-40db-80a5-e6e6d5a5a7e8_large.jpg?v=1591992228"
-                )
-              }
-            ></img>
-            <img
-              src="https://images.immediate.co.uk/production/volatile/sites/30/2019/02/Passionfruit-pornstar-martini-b9d5b1a.jpg?quality=90&resize=556,505"
-              alt="err"
-              style={{ width: "200px", height: "200px" }}
-              onClick={() =>
-                handleImageClick(
-                  "https://images.immediate.co.uk/production/volatile/sites/30/2019/02/Passionfruit-pornstar-martini-b9d5b1a.jpg?quality=90&resize=556,505"
-                )
-              }
-            ></img>
-            <img
-              src="https://www.allrecipes.com/thmb/DQIEfVzC7KndUnnHJbmB44a0u3Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/221320-old-fashioned-cocktail-ddmfs-3X4-13181414-bf1365252476463b9650096c28b5acfd.jpg"
-              alt="err"
-              style={{ width: "200px", height: "200px" }}
-              onClick={() =>
-                handleImageClick(
-                  "https://www.allrecipes.com/thmb/DQIEfVzC7KndUnnHJbmB44a0u3Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/221320-old-fashioned-cocktail-ddmfs-3X4-13181414-bf1365252476463b9650096c28b5acfd.jpg"
-                )
-              }
-            ></img>
-            <img
-              src="https://st4.depositphotos.com/3255607/26767/i/450/depositphotos_267677046-stock-photo-tropical-beach-alcohol-blue-drink.jpg"
-              alt="err"
-              style={{ width: "200px", height: "200px" }}
-              onClick={() =>
-                handleImageClick(
-                  "https://st4.depositphotos.com/3255607/26767/i/450/depositphotos_267677046-stock-photo-tropical-beach-alcohol-blue-drink.jpg"
-                )
-              }
-            ></img>
-            <img
-              src="https://zestfulkitchen.com/wp-content/uploads/2021/06/vodka-gimlet-2.jpg"
-              alt="err"
-              style={{ width: "200px", height: "200px" }}
-              onClick={() =>
-                handleImageClick(
-                  "https://zestfulkitchen.com/wp-content/uploads/2021/06/vodka-gimlet-2.jpg"
-                )
-              }
-            ></img>
-            <img
-              src="https://i.pinimg.com/736x/7f/0a/5c/7f0a5c3b306f53c83616e8e28412e28d.jpg"
-              alt="err"
-              style={{ width: "200px", height: "200px" }}
-              onClick={() =>
-                handleImageClick(
-                  "https://i.pinimg.com/736x/7f/0a/5c/7f0a5c3b306f53c83616e8e28412e28d.jpg"
-                )
-              }
-            ></img>
-            <img
-              src="https://passthesushi.com/wp-content/uploads/2014/08/Frozen-Rum-Runner-Cocktails-Kita-Roberts-PassTheSushi-1.jpg"
-              alt="err"
-              style={{ width: "200px", height: "200px" }}
-              onClick={() =>
-                handleImageClick(
-                  "https://passthesushi.com/wp-content/uploads/2014/08/Frozen-Rum-Runner-Cocktails-Kita-Roberts-PassTheSushi-1.jpg"
-                )
-              }
-            ></img>
-            <img
-              src="https://images.absolutdrinks.com/ingredient-images/Raw/Absolut/bc00554d-bf01-4446-a4c0-86bb0dccb592.jpg?imwidth=500"
-              alt="err"
-              style={{ width: "200px", height: "200px" }}
-              onClick={() =>
-                handleImageClick(
-                  "https://images.absolutdrinks.com/ingredient-images/Raw/Absolut/bc00554d-bf01-4446-a4c0-86bb0dccb592.jpg?imwidth=500"
-                )
-              }
-            ></img>
-          </div>
-          {zoomedImage && (
-            <div className="zoomed-image-container" style={{}}>
-              <button
-                className="close-button"
-                onClick={handleZoomedImageClose}
-                style={{ marginTop: "5px", marginLeft: "460px", width: "40px" }}
-              >
-                X
-              </button>
-              <div
-                className="zoomed-image-overlay"
-                onClick={handleZoomedImageClose}
-              ></div>
-              <img
-                src={zoomedImage}
-                alt="zoomed"
-                className="zoomed-image"
-                style={{ marginTop: "1px", width: "500px", height: "500px" }}
-              />
-            </div>
-          )}
-        </div>
         <div style={{ display: "flex" }}>
           <h3
             style={{
@@ -258,7 +114,7 @@ const Recipe = () => {
                 border: "1px solid black",
                 borderRadius: "8px",
                 margin: "20px",
-                marginTop: "40px",
+                marginTop: "0px",
                 marginLeft: "0px",
               }}
             >
@@ -266,7 +122,7 @@ const Recipe = () => {
             </button>
           </div>
         </div>
-        <div className="wrapper">
+        <div className="wrapper" style={{borderBottom:"2px solid white"}}>
           {searchTerm
             ? searchResults.map((drink) => (
                 <Card
@@ -343,6 +199,151 @@ const Recipe = () => {
                 </Card>
               ))}
         </div>
+      <div className="drink-wrapper">
+        <h1
+          style={{
+            textAlign: "center",
+            fontFamily: "initial",
+            color: "rgb(201 200 197)",
+            marginTop:"40px"
+          }}
+        >
+          DRINKS
+        </h1>
+        <div className="images" >
+          <img
+            src="https://www.liquor.com/thmb/sUKZSwJj7slc5l-LDyK8eajT0LY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/very-sexy-martini-720x720-primary-b1212ebf73f54f898a56f7f0b60c0a34.jpg"
+            alt="err"
+            style={{ width: "200px", height: "200px" }}
+            onClick={() =>
+              handleImageClick(
+                "https://www.liquor.com/thmb/sUKZSwJj7slc5l-LDyK8eajT0LY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/very-sexy-martini-720x720-primary-b1212ebf73f54f898a56f7f0b60c0a34.jpg"
+              )
+            }
+          ></img>
+          <img
+            src="https://www.liquor.com/thmb/FtK86O9W4_pRq1Y3gc1iJerTGP8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/vodka-martini-1500x1500-hero-080af5bb8ff04851a9c0ecf77a88a818.jpg"
+            alt="err"
+            style={{ width: "200px", height: "200px" }}
+            onClick={() =>
+              handleImageClick(
+                "https://www.liquor.com/thmb/FtK86O9W4_pRq1Y3gc1iJerTGP8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/vodka-martini-1500x1500-hero-080af5bb8ff04851a9c0ecf77a88a818.jpg"
+              )
+            }
+          ></img>
+          <img
+            src="https://www.acouplecooks.com/wp-content/uploads/2021/12/Vodka-Sunrise-001.jpg"
+            alt="err"
+            style={{ width: "200px", height: "200px" }}
+            onClick={() =>
+              handleImageClick(
+                "https://www.acouplecooks.com/wp-content/uploads/2021/12/Vodka-Sunrise-001.jpg"
+              )
+            }
+          ></img>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0247/4681/9693/files/Daiquiri_Summer_Cocktail_8a2a0474-bf6e-40db-80a5-e6e6d5a5a7e8_large.jpg?v=1591992228"
+            alt="err"
+            style={{ width: "200px", height: "200px" }}
+            onClick={() =>
+              handleImageClick(
+                "https://cdn.shopify.com/s/files/1/0247/4681/9693/files/Daiquiri_Summer_Cocktail_8a2a0474-bf6e-40db-80a5-e6e6d5a5a7e8_large.jpg?v=1591992228"
+              )
+            }
+          ></img>
+          <img
+            src="https://images.immediate.co.uk/production/volatile/sites/30/2019/02/Passionfruit-pornstar-martini-b9d5b1a.jpg?quality=90&resize=556,505"
+            alt="err"
+            style={{ width: "200px", height: "200px" }}
+            onClick={() =>
+              handleImageClick(
+                "https://images.immediate.co.uk/production/volatile/sites/30/2019/02/Passionfruit-pornstar-martini-b9d5b1a.jpg?quality=90&resize=556,505"
+              )
+            }
+          ></img>
+          <img
+            src="https://www.allrecipes.com/thmb/DQIEfVzC7KndUnnHJbmB44a0u3Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/221320-old-fashioned-cocktail-ddmfs-3X4-13181414-bf1365252476463b9650096c28b5acfd.jpg"
+            alt="err"
+            style={{ width: "200px", height: "200px" }}
+            onClick={() =>
+              handleImageClick(
+                "https://www.allrecipes.com/thmb/DQIEfVzC7KndUnnHJbmB44a0u3Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/221320-old-fashioned-cocktail-ddmfs-3X4-13181414-bf1365252476463b9650096c28b5acfd.jpg"
+              )
+            }
+          ></img>
+          <img
+            src="https://st4.depositphotos.com/3255607/26767/i/450/depositphotos_267677046-stock-photo-tropical-beach-alcohol-blue-drink.jpg"
+            alt="err"
+            style={{ width: "200px", height: "200px" }}
+            onClick={() =>
+              handleImageClick(
+                "https://st4.depositphotos.com/3255607/26767/i/450/depositphotos_267677046-stock-photo-tropical-beach-alcohol-blue-drink.jpg"
+              )
+            }
+          ></img>
+          <img
+            src="https://zestfulkitchen.com/wp-content/uploads/2021/06/vodka-gimlet-2.jpg"
+            alt="err"
+            style={{ width: "200px", height: "200px" }}
+            onClick={() =>
+              handleImageClick(
+                "https://zestfulkitchen.com/wp-content/uploads/2021/06/vodka-gimlet-2.jpg"
+              )
+            }
+          ></img>
+          <img
+            src="https://i.pinimg.com/736x/7f/0a/5c/7f0a5c3b306f53c83616e8e28412e28d.jpg"
+            alt="err"
+            style={{ width: "200px", height: "200px" }}
+            onClick={() =>
+              handleImageClick(
+                "https://i.pinimg.com/736x/7f/0a/5c/7f0a5c3b306f53c83616e8e28412e28d.jpg"
+              )
+            }
+          ></img>
+          <img
+            src="https://passthesushi.com/wp-content/uploads/2014/08/Frozen-Rum-Runner-Cocktails-Kita-Roberts-PassTheSushi-1.jpg"
+            alt="err"
+            style={{ width: "200px", height: "200px" }}
+            onClick={() =>
+              handleImageClick(
+                "https://passthesushi.com/wp-content/uploads/2014/08/Frozen-Rum-Runner-Cocktails-Kita-Roberts-PassTheSushi-1.jpg"
+              )
+            }
+          ></img>
+          <img
+            src="https://images.absolutdrinks.com/ingredient-images/Raw/Absolut/bc00554d-bf01-4446-a4c0-86bb0dccb592.jpg?imwidth=500"
+            alt="err"
+            style={{ width: "200px", height: "200px" }}
+            onClick={() =>
+              handleImageClick(
+                "https://images.absolutdrinks.com/ingredient-images/Raw/Absolut/bc00554d-bf01-4446-a4c0-86bb0dccb592.jpg?imwidth=500"
+              )
+            }
+          ></img>
+        </div>
+        {zoomedImage && (
+          <div className="zoomed-image-container" style={{}}>
+            <button
+              className="close-button"
+              onClick={handleZoomedImageClose}
+              style={{ marginTop: "5px", marginLeft: "460px", width: "40px" }}
+            >
+              X
+            </button>
+            <div
+              className="zoomed-image-overlay"
+              onClick={handleZoomedImageClose}
+            ></div>
+            <img
+              src={zoomedImage}
+              alt="zoomed"
+              className="zoomed-image"
+              style={{ marginTop: "1px", width: "500px", height: "500px" }}
+            />
+          </div>
+        )}
+      </div>
       </div>
       <Modal show={selectedItem !== null} onHide={handleCloseModal}>
         <Modal.Header closeButton>
@@ -357,7 +358,9 @@ const Recipe = () => {
                 style={{ width: "100%", marginBottom: "10px" }}
               />
               <h5>Instructions:</h5>
-              <p>{selectedItemDetails.strInstructions}</p>
+              <p style={{ textAlign: "justify", color: "black" }}>
+                {selectedItemDetails.strInstructions}
+              </p>
               <h5>Ingredients:</h5>
 
               <ul>
@@ -378,6 +381,7 @@ const Recipe = () => {
           )}
         </Modal.Body>
       </Modal>
+
     </>
   );
 };

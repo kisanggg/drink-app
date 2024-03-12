@@ -5,7 +5,8 @@ input{
     width: 250px;
     height: 30px;
 }
-.msgBtn:hover{
-    background-color: #4b9ac7;
+
+button:hover{
+    background-color: #c5d1d7;
 
 }

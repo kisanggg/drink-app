@@ -10,7 +10,7 @@ const Home = () => {
           alt="err"
           style={{
             width: "94vw",
-            height: "100vh",
+            height: "90vh",
           }}
         ></img>
         <h1
