@@ -37,7 +37,7 @@ const Ordinary = () => {
   return (
     <div style={{backgroundColor:"rgb(36, 36, 36)"}}>
        <div>
-        <h1 style={{textAlign:"center",color:"rgb(201, 200, 197)"}}>Ordinary Drinks</h1>
+        <h1 style={{textAlign:"center",color:"rgb(201, 200, 197)",fontFamily:"Times New Roman"}}>Ordinary Drinks</h1>
         <div style={{display:"grid", gridTemplateColumns:"auto auto auto auto"}}>
             {ordinary.map((drink)=>(
                  <Card
