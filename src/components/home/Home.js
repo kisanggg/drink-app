@@ -48,19 +48,20 @@ const Home = () => {
         <img src="https://media.timeout.com/images/103780539/750/422/image.jpg" alt="err" width={600} height={400} style={{position:"absolute"}}></img>
         <img src="https://www.shutterstock.com/image-photo/expert-barman-making-cocktail-night-600nw-439422121.jpg" alt="e" style={{position:"absolute",marginLeft:"630px",marginTop:"30px"}}></img>
       </div>
-      <div style={{height:"160px",backgroundColor:"rgb(189, 122, 17)",marginTop:"480px",display:"flex",justifyContent:"space-evenly",flexWrap:"wrap"}}>
-        <div style={{marginLeft:"0px"}}>
+      <div style={{height:"179px",backgroundColor:"rgb(189, 122, 17)",marginTop:"480px",display:"flex",justifyContent:"space-around",flexWrap:"wrap"}}>
+        <div style={{}}>
           <GeoAltFill size={27} style={{marginLeft:"70px",marginTop:"40px"}}/>
-          <p style={{fontSize:"17px",color:"black",textAlign:"left",marginLeft:"18px"}}>Kathmandu, Nepal</p>
+          <p style={{fontSize:"15px",color:"black",textAlign:"left",marginLeft:"22px"}}>Kathmandu, Nepal</p>
         </div>
-        <div >
-          <Clock size={27} style={{marginTop:"45px"}}/>
-          <p style={{color:"black"}}>Mon-Fri : 10AM - 12PM</p>
-          <p style={{color:"black"}}>Sat-Sun : 10AM - 4AM</p>
+        <div style={{marginLeft:"300px"}}>
+          <Clock size={25} style={{marginTop:"40px",marginLeft:"50px"}}/>
+          <p style={{color:"black",marginLeft:"0px"}}>Mon - Fri : 10AM - 12PM<br/>Sat - Sun : 10AM - 4AM</p>
         </div>
-        <div>
-          <Envelope size={27} style={{marginTop:"45px",marginLeft:"10px"}}/>
+        <div style={{marginLeft:"260px"}}>
+          <Envelope size={25} style={{marginTop:"45px",marginLeft:"70px"}}/>
+          <p style={{color:"black"}}>Cocktail.party22@gmail.com</p>
         </div>
+      <p style={{color:"black",marginTop:"30px"}}>©COPYRIGHTS 2024.COCKTAIL PARTY.ALL RIGHTS RESERVED.</p>
       </div>
     </div>
   );
